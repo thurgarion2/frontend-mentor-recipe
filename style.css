@@ -1,0 +1,209 @@
+
+/*******************************************************
+ **************** imports ******************
+ *******************************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+
+
+/*******************************************************
+ **************** global styles ******************
+ *******************************************************/
+
+/**************
+ ********* colors, default font properties
+ **************/
+
+:root {
+    /* colors */
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    /* font */
+    font-size: 16px;
+    font-family: 'Outfit';
+    color: var(--stone-600);
+
+    --semi-bold: 600;
+    --bold: 700;
+
+    --mesure: 60ch;
+}
+
+/**************
+ ********* layout styles
+ **************/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    line-height: 1.5em;
+}
+
+
+p, li, h1, h2 {
+    max-inline-size: var(--mesure);
+}
+
+li + li {
+    margin-block-start: 0.9em;
+}
+
+/**************
+ ********* aesthetics
+ **************/
+
+body {
+    background-color: var(--stone-100);
+}
+
+
+h1, h2 {
+    font-family: 'Young Serif';
+    font-weight: var(--semi-bold);
+}
+
+
+strong {
+    font-weight: var(--bold);
+}
+
+/*******************************************************
+ **************** layouts ******************
+ *******************************************************/
+
+
+.cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 7.5em;
+}
+
+.stack-medium {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.stack-small {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+}
+
+.stack-extra-small {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/*******************************************************
+ **************** recipe style ******************
+ *******************************************************/
+
+/**************
+ ********* other
+ **************/
+
+h1 {
+    color: var(--stone-900);
+    font-size: 2.25em;
+}
+
+.recipe-container {
+    background-color: white;
+    padding: 2.5em;
+    border-radius: 1.5em;
+}
+
+.recipe-illustration {
+    width: 40em;
+    border-radius: 0.75em;
+}
+
+/**************
+ ********* preparation time
+ **************/
+
+section.recipe-time {
+    background-color: var(--rose-50);
+    padding: 1.8em;
+}
+
+section.recipe-time h2 {
+    font-family: 'Outfit';
+    color: var(--rose-800);
+    font-size: 1.4em;
+}
+
+/**************
+ ********* ingredients, instructions, nutrition
+ **************/
+
+.stack-recipe h2 {
+    color: var(--brown-800);
+    font-size: 1.5;
+}
+
+.stack-recipe > hr {
+    border: 1px solid var(--stone-150);
+    margin-block: 2em;
+}
+
+/********
+**** nutrition table
+********/
+
+
+table.nutrition-table {
+    border-collapse: collapse;
+}
+
+table.nutrition-table tr {
+    border-block-end: 1px solid var(--stone-150);
+}
+
+table.nutrition-table tr:last-child  {
+    border: none;
+}
+
+table.nutrition-table td{
+    padding-block: 1em;
+    padding-inline: 1.5em;
+}
+
+table.nutrition-table strong{
+   color: var(--brown-800);
+}
+
+/*******************************************************
+ **************** global styles ******************
+ *******************************************************/
+
+@media (max-width: 47em) {
+    .recipe-container {
+        padding: 1.7em;
+        border-radius: 0;
+        width: 100%;
+    }
+    
+    .recipe-illustration {
+        width: 100%;
+        border-radius: 0;
+        padding: 0;
+    }
+    
+    .cover {
+        padding-block: 0;
+    }
+    
+}
