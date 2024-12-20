@@ -32,6 +32,7 @@
     font-family: 'Outfit';
     color: var(--stone-600);
 
+    --normal: 400;
     --semi-bold: 600;
     --bold: 700;
 
@@ -45,7 +46,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    line-height: 1.5em;
+    line-height: 1.15em;
 }
 
 
@@ -68,7 +69,7 @@ body {
 
 h1, h2 {
     font-family: 'Young Serif';
-    font-weight: var(--semi-bold);
+    font-weight: var(--normal);
 }
 
 
@@ -104,6 +105,15 @@ strong {
     display: flex;
     flex-direction: column;
     gap: 1em;
+}
+
+/*******************************************************
+ **************** utilities ******************
+ *******************************************************/
+
+.brown-marker > li::marker {
+    color: var(--brown-800);
+    font-weight: var(--bold);
 }
 
 /*******************************************************
